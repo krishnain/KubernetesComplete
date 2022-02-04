@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: nginx-service
+ labels:
+  author: hbc
+spec:
+ type: LoadBalancer
+ ports:
+  - targetPort: 80
+    port: 80
+ selector:
+  type: appserver

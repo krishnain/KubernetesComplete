@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx-pod
+ labels:
+  type: db
+  author: hbc
+spec:
+ containers:
+  - name: webserver
+    image: nginx
+...
+
+

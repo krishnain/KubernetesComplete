@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-deployment
+  labels:
+    type: ci-cd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: ci-cd
+  template:
+    metadata:
+      name: jenkins-pod
+      labels:
+        type: ci-cd
+    spec:
+      containers:
+        - name: myjenkins
+          image: jenkins/jenkins
+      tolerations:
+        - key: slave3
+          value: node3
+          effect: NoSchedule
+          operator: Equal

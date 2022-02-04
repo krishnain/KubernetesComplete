@@ -1,0 +1,10 @@
+---
+wordpressUsername: admin
+wordpressPassword: admin
+wordpressEmail: selenium.saikrishan@gmail.com
+wordpressFirstName: Sai
+wordpressLastName: Krishna
+wordpressBlogName: mywordpres.com
+service:
+ type: LoadBalancer
+...
